@@ -29,6 +29,16 @@ public class UsoFileReaderWriter {
                 System.out.print((char)ch);
                 ch = lector.read();
             }
+            lector.close();
+            
+            FileReader lector2 = new FileReader("archivo.txt");
+            char[] buf = new char[10];
+            ch = lector2.read(buf);
+            while(ch != -1){
+                System.out.print(buf);
+                ch = lector2.read(buf);
+            }
+            lector2.close();
         } catch (FileNotFoundException ex) {
             System.out.println(ex);
         } catch (IOException ex) {
