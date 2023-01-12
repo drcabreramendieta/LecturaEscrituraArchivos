@@ -20,8 +20,15 @@ public class UsoFileReaderWriter {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ConRead cr = new ConRead();
-        cr.leerArchivo();
+        //ConRead cr = new ConRead();
+        //cr.leerArchivo();
+        
+        ConBufferedReader cbr = new ConBufferedReader();
+        try {
+            cbr.leerArchivo();
+        } catch (IOException ex) {
+            System.out.println(ex);
+        }
     }
     
 }
