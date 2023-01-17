@@ -7,6 +7,7 @@ package usofilereaderwriter;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -16,7 +17,9 @@ public class ConBufferedWriter {
     public void escribirArchivo(String path, String contenido) throws IOException{
         FileWriter fw = new FileWriter(path, true);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(contenido);
-        bw.close();
+        PrintWriter pw = new PrintWriter(bw);
+        
+        pw.println(contenido);
+        pw.close();
     }
 }
