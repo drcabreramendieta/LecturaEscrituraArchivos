@@ -19,16 +19,19 @@ public class UsoFileReaderWriter {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //ConRead cr = new ConRead();
         //cr.leerArchivo();
         
-        ConBufferedReader cbr = new ConBufferedReader();
+        /*ConBufferedReader cbr = new ConBufferedReader();
         try {
             cbr.leerArchivo();
         } catch (IOException ex) {
             System.out.println(ex);
-        }
+        }*/
+        ConWriter cw = new ConWriter();
+        cw.escribirArchivo("archivow2.txt", "Hola mundo");
+        cw.cargarArchivo("archivow2.txt");
     }
     
 }
