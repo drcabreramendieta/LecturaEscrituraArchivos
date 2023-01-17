@@ -29,9 +29,9 @@ public class UsoFileReaderWriter {
         } catch (IOException ex) {
             System.out.println(ex);
         }*/
-        ConWriter cw = new ConWriter();
+        ConBufferedWriter cw = new ConBufferedWriter();
         cw.escribirArchivo("archivow2.txt", "Hola mundo");
-        cw.cargarArchivo("archivow2.txt");
+        //cw.cargarArchivo("archivow2.txt");
     }
     
 }

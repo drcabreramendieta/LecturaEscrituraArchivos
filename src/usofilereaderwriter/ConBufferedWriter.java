@@ -17,5 +17,6 @@ public class ConBufferedWriter {
         FileWriter fw = new FileWriter(path, true);
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write(contenido);
+        bw.close();
     }
 }
